@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
+
+        body {
+            background: linear-gradient(to right, #ff6f0088, #ff480080), url('https://media.giphy.com/media/3og0IOu0cvDr9T3rBC/giphy.gif') no-repeat;
+            background-size: 100vw 100vh;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .navbar {
+            opacity: 0.95;
+            margin: 0px;
+            padding: 20px;
+            background-color: white;
+            font-size: 25px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .5);
+        }
+
+        .navbar a {
+            color: #a5a58d;
+            float: right;
+            text-decoration: none;
+            font-weight: 300;
+            padding: 3px 3px;
+            margin-right: 25px;
+        }
+
+        .navbar a {
+            position: relative;
+            transition: color 0.3s ease-in;
+            transition: transform 0.3s ease-in;
+        }
+
+        .navbar a:hover {
+            color: #FF8500;
+            transform: scale(1.05);
+        }
+
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            border-bottom: 3px solid #FF8500;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-in;
+        }
+
+        .navbar a:hover:before {
+            transform: scaleX(1);
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: white;
+            text-align: center;
+            font-size: 60px;
+        }
+
+        .main-link {
+            background-color: white;
+            border: 2px white solid;
+            padding: 15px 20px 15px 20px;
+            margin: 15px 0 15px 0;
+            text-transform: uppercase;
+            color: #FF8500;
+            font-size: 20px;
+            font-weight: 300;
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .main-link:hover {
+            background-color: transparent;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .pd p {
+            text-align: center;
+            color: white;
+            font-style: italic;
+            font-size: 20px;
+            width: min(90vw, 600px);
+            font-weight: 300;
+            margin-bottom: 22px;
+        }
+
+        .pd {
+            margin-top: 17vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/upload">Predict</a>
+        <a href="/info">Info</a>
+        <a href="/about">Home</a>
+        <br>
+    </div>
+    <b class="pd">
+        <h1>Arrhythmia Detection</h1>
+        <p>A deep learning enabled tool to detect the presence of arrhythmia based on ECG images</p>
+        <br>
+    </b>
+    <a class="main-link" href="/info">Learn more</a>
+    </div>
+</body>
+
+</html>
