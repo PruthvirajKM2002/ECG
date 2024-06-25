@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
+
+        body {
+            background: blanchedalmond;
+            background-size: 100vw 100vh;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .navbar {
+            opacity: 0.95;
+            margin: 0px;
+            padding: 20px;
+            background-color: white;
+            font-size: 25px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .5);
+        }
+
+        .navbar a {
+            color: #a5a58d;
+            float: right;
+            text-decoration: none;
+            font-weight: 300;
+            padding: 3px 3px;
+            margin-right: 25px;
+        }
+
+        .navbar a {
+            position: relative;
+            transition: color 0.3s ease-in;
+            transition: transform 0.3s ease-in;
+        }
+
+        .navbar a:hover {
+            color: #FF8500;
+            transform: scale(1.05);
+        }
+
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            border-bottom: 3px solid #FF8500;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-in;
+        }
+
+        .navbar a:hover:before {
+            transform: scaleX(1);
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+            text-align: center;
+            font-size: 40px;
+            letter-spacing: 1.5px;
+        }
+
+        h1 span:nth-child(2) {
+            color: #FF8500;
+        }
+
+        .img_container {
+            width: 90vw;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-bottom: 3rem;
+            gap: 2rem 1.3rem;
+        }
+
+        .featured-card {
+            background-color: whitesmoke;
+            width: 32%;
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .card-header {
+            width: 100%;
+            height: 15rem;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-body h3 {
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            margin: 0.8rem 0;
+        }
+
+        .card-body p {
+            margin: 0.8rem 0;
+            color: #7A3B00;
+        }
+
+        .featured-card:hover {
+            transform: scale(1.025);
+        }
+
+        .featured-card {
+            transition: transform 0.3s ease-in;
+        }
+    </style>
+    <title>Info</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/upload">Predict</a>
+        <a href="/info">Info</a>
+        <a href="/about">Home</a>
+        <br>
+    </div>
+    <div>
+        <h1>
+            <span>Classification</span>
+            <span>Guide</span>
+        </h1>
+        <div class="img_container">
+            <article class="featured-card">
+                <div class="card-header">
+                    <img src="static//normal.png" alt="normal">
+                </div>
+                <div class="card-body">
+                    <h3>Normal</h3>
+                    <p>The heart beats regularly, with an orderly sequence of electrical signals causing the atria (upper chambers) to contract followed by the ventricles (lower chambers), resulting in effective blood pumping.
+                       <br> P wave: Contraction of the atria.
+                       <br> QRS complex: Contraction of the ventricles.
+                       <br> T wave: Relaxation of the ventricles.</p>
+                </div>
+            </article>
+            <article class="featured-card">
+                <div class="card-header">
+                    <img src="static//vf.png" alt="ventricular fibrillation">
+                </div>
+                <div class="card-body">
+                    <h3>Ventricular Fibrillation</h3>
+                    <p>This is a chaotic, irregular heart rhythm originating from the ventricles. It's a medical emergency as it can lead to cardiac arrest and death within minutes if not treated promptly. The PQRST waveform is chaotic with no discernible pattern.</p>
+                </div>
+            </article>
+            <article class="featured-card">
+                <div class="card-header">
+                    <img src="static//pac.png" alt="ventricular fibrillation">
+                </div>
+                <div class="card-body">
+                    <h3>Premature Atrial Contraction</h3>
+                    <p>These are extra, abnormal heartbeats originating in the atria. They often occur due to stress, caffeine, or other stimulants. The PQRST waveform may have an early P wave followed by a normal QRS complex and T wave.</p>
+                </div>
+            </article>
+            <article class="featured-card">
+                <div class="card-header">
+                    <img src="static//pvc.png" alt="ventricular fibrillation">
+                </div>
+                <div class="card-body">
+                    <h3>Premature Ventricular Contraction</h3>
+                    <p>These are extra, abnormal heartbeats originating in the ventricles. They can be benign or indicate underlying heart problems. The PQRST waveform may show a wide and bizarre QRS complex occurring earlier than expected.</p>
+                </div>
+            </article>
+            <article class="featured-card">
+                <div class="card-header">
+                    <img src="static//rbbb.png" alt="ventricular fibrillation">
+                </div>
+                <div class="card-body">
+                    <h3>Right Bundle Branch Block</h3>
+                    <p>This is a delay or blockage in the electrical signals along the right bundle branch, which can be due to heart disease or other factors. The QRS complex in the PQRST waveform is widened and may appear slurred.</p>
+                </div>
+            </article>
+            <article class="featured-card">
+                <div class="card-header">
+                    <img src="static//lbbb.png" alt="ventricular fibrillation">
+                </div>
+                <div class="card-body">
+                    <h3>Left Bundle Branch Block</h3>
+                    <p>Similar to RBBB but affecting the left bundle branch. It can indicate heart disease and may lead to abnormal heart rhythms. The QRS complex in the PQRST waveform is widened, often with a broad and notched appearance.</p>
+                </div>
+            </article>
+            <div>
+</body>
+
+</html>
